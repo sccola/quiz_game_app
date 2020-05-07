@@ -54,3 +54,28 @@ p {
     padding: 0.125em;
     margin: 0.5em auto;
 }
+
+.btn {
+    color: white;
+    background-color: green;
+    padding: .5em;
+    text-decoration: none;
+    width: 50%;
+    white-space: nowrap;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 0.5em;
+    margin-top: 0;
+    font-weight: 700;
+    border-radius: 0.5em;
+    overflow: visible;
+    margin: 0;
+}
+
+#btn-restart {
+    padding: 0;
+}
+
+button:hover, li:hover {
+    cursor: pointer;
+}
