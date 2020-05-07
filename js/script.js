@@ -137,4 +137,29 @@ let updateScores = score => {
     gameScore.innerText = `YOUR CORRECT ANSWERS: ${score}`;
 }
 
+//Move to Next Question (Next Button Listener)
+nextBtn.addEventListener('click', () => {
+  if(answeredQuestion) {
+    refreshDisplay();
+    optionsList.classList.remove('no-click');
+    //console.log('you clicked Next')
+    //console.log(quizIndex)
+    if(quizIndex < gameQuestions.length) {
+        nextQuestion(quizIndex);
+        quizIndex++;
+    } else{
+        nextBtn.classList.add('hide');
+        questionDiv.classList.add('hide');
+        endGame();
+    }
+  } else if(!answeredQuestion){
+    alert('Choose an answer to continue')
+  }
+});
+
+//Re-shuffle
+let shuffleQuestions = () => {
+    questionBank.sort(() => Math.random() - 0.5);
+}
+
 
