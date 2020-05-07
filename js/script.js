@@ -54,5 +54,28 @@ let refreshDisplay = () => {
     }
 }
 
+//Start a New Game
+startBtn.addEventListener('click', () => {
+    //console.log('you clicked start Game')
+    //console.log(quizIndex)
+    newGame();
+    startBtn.classList.add('hide');
+    quizRulesDiv.classList.add('hide');
+    scoreDiv.classList.remove('hide');
+    nextBtn.classList.remove('hide');
+    quizIndex++;
+});
+
+// Pull a Set of 5 Questions from Question Bank
+const newQuestions = () => {
+    if(gameQuestions.length === 0){
+        for(let i=0; i<5; i++) {
+            gameQuestions.push(questionBank[i])
+        }
+        //console.log(gameQuestions)
+        return gameQuestions;
+    }
+}
+
 
 
