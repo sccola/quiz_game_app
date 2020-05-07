@@ -14,5 +14,17 @@ let optionsList = document.createElement('ul');
 let gameScoreDiv = document.querySelector('#score-div');
 let gameScore = document.createElement('p');
 
+// Load Set of New Questions
+let gameQuestions = [];
+
+// Initialize Questions counter
+let quizIndex = 0;
+
+// initialize Score counter
+let score = 0;
+
+// initialize status of question (check if user can move to next question)
+let answeredQuestion = false;
+
 
 
