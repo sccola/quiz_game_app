@@ -162,4 +162,73 @@ let shuffleQuestions = () => {
     questionBank.sort(() => Math.random() - 0.5);
 }
 
+// End Game and Display Final Scores
+const endGame = () => {
+    alert('Game Over!!!')
+    // Announce Final Game Score
+    //if(score > 1) {
+        gameScore.innerText = `GAME OVER!!!
+        TOTAL QUESTIONS: ${gameQuestions.length}
+        YOUR CORRECT ANSWER(S): ${score}`;
+    //}
+    playAgainBtn.classList.remove('hide');
+}
+
+// Questions Bank (Arrays of Objects with nested Array)
+const questionBank = [
+    {  quiz: 'What is the capital of Taraba State?',
+        options: [
+            {option: 'Taraba', correct: false},
+            {option: 'Yola', correct: false},
+            {option: 'Azare', correct: false},
+            {option: 'Jalingo', correct: true},
+            {option: 'Wukari', correct: false}
+        ]
+    },
+    {   quiz: 'What is the capital of Gombe State?',
+        options: [
+            {option: 'Gombe', correct: true},
+            {option: 'Azare', correct: false},
+            {option: 'Ashaka', correct: false},
+            {option: 'Damaturu', correct: false},
+            {option: 'Potiskum', correct: false}
+        ]
+    },
+    {   quiz: 'What is the capital of Borno State?',
+        options: [
+            {option: 'Azare', correct: false},
+            {option: 'Yola', correct: false},
+            {option: 'Konduga', correct: false},
+            {option: 'Maiduguri', correct: true},
+            {option: 'Bama', correct: false}
+        ]
+    },
+    {   quiz: 'What is the capital of Yobe State?',
+        options: [
+            {option: 'Maiduguri', correct: false},
+            {option: 'Azare', correct: false},
+            {option: 'Takum', correct: false},
+            {option: 'Potiskum', correct: false},
+            {option: 'Damaturu', correct: true}
+        ]
+    },
+    {   quiz: 'What is the capital of Adamawa State?',
+        options: [
+            {option: 'Mubi', correct: false},
+            {option: 'Yola', correct: true},
+            {option: 'Jalingo', correct: false},
+            {option: 'Geidam', correct: false},
+            {option: 'Potiskum', correct: false}
+        ]
+    },
+    {   quiz: 'What is the capital of Bauchi State?',
+        options: [
+            {option: 'Gombe', correct: false},
+            {option: 'Mubi', correct: false},
+            {option: 'Bauchi', correct: true},
+            {option: 'Michika', correct: false},
+            {option: 'Biu', correct: false}
+        ]
+    }
+];
 
