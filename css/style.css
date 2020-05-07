@@ -33,3 +33,24 @@ ul li {
     margin-left: 0;
     width: 87%;
 }
+
+.rules-div, .question-div, .controls-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+p {
+    font-size: 1em;
+    font-weight: bold;
+    padding: 0 1em;
+    margin: 0.5em auto;
+}
+
+#score-div {
+    width: 90%;
+    text-align: center;
+    border: 1px solid green;
+    padding: 0.125em;
+    margin: 0.5em auto;
+}
