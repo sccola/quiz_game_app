@@ -1,1 +1,35 @@
+html {
+    font-family: helvetica,Arial,sans-serif;
+    line-height: 1.5;
+    box-sizing: border-box;
+}
 
+body {
+    margin: 0;
+    background-color: #181a1b;
+    color: #ffffff;
+}
+
+.container {
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1em;
+}
+
+#game-div {
+    width: 100%;
+    max-width: 30em;
+    border-radius: 1em;
+    padding: 2em 0px;
+    background-color: #000000;
+}
+
+ul li {
+    list-style:upper-alpha;
+    padding: 0 1em;
+    margin-bottom: 1em;
+    margin-left: 0;
+    width: 87%;
+}
