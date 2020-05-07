@@ -164,7 +164,7 @@ const newGame = () => {
 
 // End Game and Display Final Scores
 const endGame = () => {
-    alert('Game Over!!!')
+    //alert('Game Over!!!')
     // Announce Final Game Score
     //if(score > 1) {
         gameScore.innerText = `GAME OVER!!!
