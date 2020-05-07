@@ -26,16 +26,6 @@ body {
     background-color: #000000;
 }
 
-
-ul li {
-    list-style:upper-alpha;
-    padding: 0 1em;
-    margin-bottom: 1em;
-    margin-left: 0;
-    width: 87%;
-}
-
-
 .rules-div, .question-div, .controls-div {
     display: flex;
     flex-direction: column;
@@ -80,6 +70,14 @@ p {
 
 button:hover, li:hover {
     cursor: pointer;
+}
+
+ul li {
+    list-style:upper-alpha;
+    padding: 0 1em;
+    margin-bottom: 1em;
+    margin-left: 0;
+    width: 87%;
 }
 
 .correct-answer {
