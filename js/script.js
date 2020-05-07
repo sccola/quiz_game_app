@@ -7,5 +7,12 @@ let startBtn = document.querySelector('button#btn-start');
 let nextBtn = document.querySelector('button#btn-next');
 let playAgainBtn = document.querySelector('#btn-restart');
 
+// Answers' Variables
+let optionsDiv = document.querySelector('div#options-div');
+let optionsList = document.createElement('ul');
+//const option = document.createElement('li');
+let gameScoreDiv = document.querySelector('#score-div');
+let gameScore = document.createElement('p');
+
 
 
