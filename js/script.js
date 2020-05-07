@@ -77,5 +77,64 @@ const newQuestions = () => {
     }
 }
 
+//Load Next Question and Answers
+const nextQuestion = (quizIndex) => {
+    // 1. Load Question
+    question.innerText = gameQuestions[quizIndex].quiz; //console.log(question.innerText);
+    questionDiv.appendChild(question);
+
+    // 2. Load Answers
+    //option.innerText = gameQuestions[quizIndex].options[quizIndex].option; //console.log(option.innerText);
+    let quizOptions = gameQuestions[quizIndex].options;
+    //console.log(quizOptions);
+
+    let shuffleAnswers = (() => {
+        quizOptions.sort(() => Math.random() - 0.5);
+    })();
+
+    for(item of quizOptions) {
+        const option = document.createElement('li');
+        option.innerText = item.option;  //console.log(item.option);
+        // console.log(option);
+            option.dataset.correct = item.correct;
+            //console.log(option.dataset.correct);
+        optionsList.appendChild(option);
+    }
+    optionsDiv.appendChild(optionsList);
+    //console.log(optionsList);
+
+    // Show answers when user clicked an option
+    let answerOptions = document.querySelectorAll('li');
+    let userOption, correctOption;
+
+    for (answer of answerOptions) {
+         //console.log(answer);
+         if(answer.dataset.correct === 'true') {
+            correctOption = answer;
+            //console.log(correctOption)
+            }
+
+        answer.addEventListener('click', event => {
+            //console.log(correctOption)
+            userOption = event.target;
+            //console.log (userOption.dataset.correct)
+            if (userOption.dataset.correct === 'true') {
+                userOption.classList.add('correct-answer')
+                score++;
+                updateScores(score);
+            } else {
+                userOption.classList.add('wrong-answer')
+                correctOption.classList.add('correct-answer')
+            }
+            answeredQuestion = true;
+            optionsList.classList.add('no-click');
+        })
+    }
+}
+
+//Update Scores
+let updateScores = score => {
+    gameScore.innerText = `YOUR CORRECT ANSWERS: ${score}`;
+}
 
 
