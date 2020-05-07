@@ -44,6 +44,7 @@ const newGame = () => {
     gameScoreDiv.appendChild(gameScore);
 }
 
+
 //reset display area for Answer Options
 let refreshDisplay = () => {
     //nextBtn.classList.add('no-click');
