@@ -26,8 +26,6 @@ let score = 0;
 // initialize status of question (check if user can move to next question)
 let answeredQuestion = false;
 
-
-
 //reset display area for Answer Options
 let refreshDisplay = () => {
     //nextBtn.classList.add('no-click');
@@ -146,6 +144,24 @@ let shuffleQuestions = () => {
     questionBank.sort(() => Math.random() - 0.5);
 }
 
+// Start New Game
+const newGame = () => {
+
+    // 1. Shuffle Quiz Bank before loading new set of Qustions
+    shuffleQuestions();
+
+    // 2. Load Set of Questions for New Game
+    newQuestions();
+        //console.log(gameQuestions)
+
+    // 3. Load Next Question and Answers
+    nextQuestion(quizIndex);
+
+    // 4. Initialize Game Score
+    gameScore.innerText = `YOUR CORRECT ANSWERS: ${score}`;
+    gameScoreDiv.appendChild(gameScore);
+}
+
 // End Game and Display Final Scores
 const endGame = () => {
     alert('Game Over!!!')
@@ -215,3 +231,4 @@ const questionBank = [
         ]
     }
 ];
+
