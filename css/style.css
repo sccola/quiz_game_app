@@ -35,6 +35,7 @@ ul li {
     width: 87%;
 }
 
+
 .rules-div, .question-div, .controls-div {
     display: flex;
     flex-direction: column;
