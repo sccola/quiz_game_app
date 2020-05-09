@@ -116,7 +116,8 @@ const nextQuestion = (quizIndex) => {
 
 //Update Scores
 let updateScores = score => {
-    gameScore.innerText = `YOUR CORRECT ANSWERS: ${score} OUT OF ${quizIndex}`;
+    //gameScore.innerText = `YOUR CORRECT ANSWERS: ${score} OUT OF ${quizIndex}`;
+    gameScore.innerText = `YOUR CORRECT ANSWERS: ${score}`;
 }
 
 //Move to Next Question (Next Button Listener)
@@ -158,7 +159,8 @@ const newGame = () => {
     nextQuestion(quizIndex);
 
     // 4. Initialize Game Score
-    gameScore.innerText = `YOUR CORRECT ANSWERS: ${score} OUT OF ${quizIndex}`;
+    //gameScore.innerText = `YOUR CORRECT ANSWERS: ${score} OUT OF ${quizIndex}`;
+    gameScore.innerText = `YOUR CORRECT ANSWERS: ${score}`;
     gameScoreDiv.appendChild(gameScore);
 }
 
