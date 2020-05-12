@@ -39,6 +39,10 @@ p {
     margin: 0.5em auto;
 }
 
+p#start {
+    padding: 0 2.3em;
+}
+
 #score-div {
     width: 90%;
     text-align: center;
@@ -90,6 +94,10 @@ ul li {
     width: 87%;
 }
 
+.rules-div ul li{
+    list-style-type: square;
+}
+
 .correct-answer {
     background-color: green;
     color: white;
@@ -109,14 +117,10 @@ ul li {
 }
 
 @media screen and (max-width: 480px){
-   
+    
 }
 
 @media screen and (max-width: 320em){
-    body {
-        font-size: 0.8em;
-    }
-
     p {
         padding-left: 1em;
         padding-right: 1em;
