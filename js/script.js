@@ -2,6 +2,7 @@
 let quizRulesDiv = document.querySelector('div.rules-div');
 let questionDiv = document.querySelector('div.question-div');
 let question = document.createElement('p');
+let questionNumber = document.querySelector('#que-num-div');
 let scoreDiv = document.querySelector('#score-div');
 let startBtn = document.querySelector('button#btn-start');
 let nextBtn = document.querySelector('button#btn-next');
@@ -43,6 +44,7 @@ startBtn.addEventListener('click', () => {
     newGame();
     startBtn.classList.add('hide');
     quizRulesDiv.classList.add('hide');
+    questionNumber.classList.remove('hide');
     scoreDiv.classList.remove('hide');
     nextBtn.classList.remove('hide');
     quizIndex++;
@@ -62,6 +64,7 @@ const newQuestions = () => {
 //Load Next Question and Answers
 const nextQuestion = (quizIndex) => {
     // 1. Load Question
+    questionNumber.innerText = `QUESTION ${quizIndex + 1} OF 5`;
     question.innerText = gameQuestions[quizIndex].quiz; //console.log(question.innerText);
     questionDiv.appendChild(question);
 
@@ -171,7 +174,7 @@ const endGame = () => {
     //if(score > 1) {
         gameScore.innerText = `GAME OVER!!!
         TOTAL QUESTIONS: ${gameQuestions.length}
-        YOUR CORRECT ANSWER(S): ${score}`;
+        YOUR CORRECT ANSWERS: ${score}`;
     //}
     playAgainBtn.classList.remove('hide');
 }

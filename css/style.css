@@ -47,6 +47,16 @@ p {
     margin: 0.5em auto;
 }
 
+#que-num-div {
+    width: 40%;
+    color: white;
+    background-color: green;
+    text-align: center;
+    border: 1px solid green;
+    padding: 0.125em;
+    margin: 0.5em auto;
+}
+
 .btn {
     color: white;
     background-color: green;
@@ -98,19 +108,21 @@ ul li {
     pointer-events: none;
 }
 
-@media screen and (max-width: 25em){
+@media screen and (max-width: 480px){
+   
+}
+
+@media screen and (max-width: 320em){
     body {
         font-size: 0.8em;
     }
-}
 
-@media screen and (max-width: 17em){
     p {
         padding-left: 1em;
         padding-right: 1em;
     }
 
-    .btn {
+    .btn, #que-num-div {
         width: 90%;
     }
 }
