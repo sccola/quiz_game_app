@@ -51,7 +51,7 @@ p#start {
     margin: 0.5em auto;
 }
 
-#que-num-div {
+#que-num {
     width: 40%;
     color: white;
     background-color: green;
@@ -126,7 +126,7 @@ ul li {
         padding-right: 1em;
     }
 
-    .btn, #que-num-div {
+    .btn, #que-num {
         width: 90%;
     }
 }
